@@ -1,9 +1,7 @@
-Outdated for 1.9.1
-ETA: a long time
+Updated for 1.9.2, reinstall the extension.
 
 
-
-# ♿ 1.9.0 wheelchair
+# ♿ 1.9.2 wheelchair
 Become a cripple, use a wheelchair...
 
 ### Chromium Extension
