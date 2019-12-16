@@ -323,8 +323,8 @@ function cripple_window(_window) {
                         original_save.apply(c, []);
 
                         // perfect box esp
-                    //    c.lineWidth = 0;
-                     //   c.strokeStyle = 'rgba(255,50,50,0)';
+                       c.lineWidth = 0;
+                       c.strokeStyle = 'rgba(255,50,50,0)';
 
                         let distanceScale = Math.max(.3, 1 - getD3D(worldPosition.x, worldPosition.y, worldPosition.z, e.x, e.y, e.z) / 600);
                         original_scale.apply(c, [distanceScale, distanceScale]);
