@@ -323,25 +323,25 @@ function cripple_window(_window) {
                         original_save.apply(c, []);
 
                         // perfect box esp
-                        c.lineWidth = 0;
-                        c.strokeStyle = 'rgba(255,50,50,1)';
+                    //    c.lineWidth = 0;
+                     //   c.strokeStyle = 'rgba(255,50,50,0)';
 
                         let distanceScale = Math.max(.3, 1 - getD3D(worldPosition.x, worldPosition.y, worldPosition.z, e.x, e.y, e.z) / 600);
                         original_scale.apply(c, [distanceScale, distanceScale]);
                         let xScale = scaledWidth / distanceScale;
                         let yScale = scaledHeight / distanceScale;
 
-                     //   original_beginPath.apply(c, []);
-                   //     ymin = yScale * (1 - ymin);
-                   //     ymax = yScale * (1 - ymax);
-                   //     xmin = xScale * xmin;
-                   //     xmax = xScale * xmax;
-                   //     original_moveTo.apply(c, [xmin, ymin]);
-                   //     original_lineTo.apply(c, [xmin, ymax]);
-                   //     original_lineTo.apply(c, [xmax, ymax]);
-                    //    original_lineTo.apply(c, [xmax, ymin]);
-                    //    original_lineTo.apply(c, [xmin, ymin]);
-                    //    original_stroke.apply(c, []);
+                        original_beginPath.apply(c, []);
+                        ymin = yScale * (1 - ymin);
+                        ymax = yScale * (1 - ymax);
+                        xmin = xScale * xmin;
+                        xmax = xScale * xmax;
+                        original_moveTo.apply(c, [xmin, ymin]);
+                        original_lineTo.apply(c, [xmin, ymax]);
+                        original_lineTo.apply(c, [xmax, ymax]);
+                        original_lineTo.apply(c, [xmax, ymin]);
+                        original_lineTo.apply(c, [xmin, ymin]);
+                        original_stroke.apply(c, []);
 
                         // health bar
                         c.fillStyle = "rgba(255,50,50,1)";
