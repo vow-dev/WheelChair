@@ -331,29 +331,29 @@ function cripple_window(_window) {
                         let xScale = scaledWidth / distanceScale;
                         let yScale = scaledHeight / distanceScale;
 
-                        original_beginPath.apply(c, []);
-                        ymin = yScale * (1 - ymin);
-                        ymax = yScale * (1 - ymax);
-                        xmin = xScale * xmin;
-                        xmax = xScale * xmax;
-                        original_moveTo.apply(c, [xmin, ymin]);
-                        original_lineTo.apply(c, [xmin, ymax]);
-                        original_lineTo.apply(c, [xmax, ymax]);
-                        original_lineTo.apply(c, [xmax, ymin]);
-                        original_lineTo.apply(c, [xmin, ymin]);
-                        original_stroke.apply(c, []);
+                     //   original_beginPath.apply(c, []);
+                   //     ymin = yScale * (1 - ymin);
+                   //     ymax = yScale * (1 - ymax);
+                   //     xmin = xScale * xmin;
+                   //     xmax = xScale * xmax;
+                   //     original_moveTo.apply(c, [xmin, ymin]);
+                   //     original_lineTo.apply(c, [xmin, ymax]);
+                   //     original_lineTo.apply(c, [xmax, ymax]);
+                    //    original_lineTo.apply(c, [xmax, ymin]);
+                    //    original_lineTo.apply(c, [xmin, ymin]);
+                    //    original_stroke.apply(c, []);
 
                         // health bar
                         c.fillStyle = "rgba(255,50,50,1)";
                         let barMaxHeight = ymax - ymin;
-                        original_fillRect.apply(c, [xmin - 7, ymin, -10, barMaxHeight]);
+                        original_fillRect.apply(c, [xmin - 5, ymin, -8, barMaxHeight]);
                         c.fillStyle = "#00FFFF";
-                        original_fillRect.apply(c, [xmin - 7, ymin, -10, barMaxHeight * (e.health / e.maxHealth)]);
+                        original_fillRect.apply(c, [xmin - 5, ymin, -8, barMaxHeight * (e.health / e.maxHealth)]);
 
                         // info
                         c.font = "45px Consolas";
-                        c.fillStyle = "green";
-                        c.strokeStyle='black';
+                        c.fillStyle = "white";
+                        c.strokeStyle='green';
                         c.lineWidth = 1;
                         let x = xmax + 7;
                         let y = ymax;
