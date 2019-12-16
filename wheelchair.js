@@ -323,7 +323,7 @@ function cripple_window(_window) {
                         original_save.apply(c, []);
 
                         // perfect box esp
-                        c.lineWidth = 5;
+                        c.lineWidth = 3;
                         c.strokeStyle = 'rgba(255,50,50,1)';
 
                         let distanceScale = Math.max(.3, 1 - getD3D(worldPosition.x, worldPosition.y, worldPosition.z, e.x, e.y, e.z) / 600);
@@ -351,7 +351,7 @@ function cripple_window(_window) {
                         original_fillRect.apply(c, [xmin - 7, ymin, -10, barMaxHeight * (e.health / e.maxHealth)]);
 
                         // info
-                        c.font = "60px Sans-serif";
+                        c.font = "60px Consolas";
                         c.fillStyle = "white";
                         c.strokeStyle='black';
                         c.lineWidth = 1;
@@ -359,7 +359,7 @@ function cripple_window(_window) {
                         let y = ymax;
                         original_fillText.apply(c, [e.name, x, y]);
                         original_strokeText.apply(c, [e.name, x, y]);
-                        c.font = "30px Sans-serif";
+                        c.font = "30px Consolas";
                         y += 35;
                         original_fillText.apply(c, [e.weapon.name, x, y]);
                         original_strokeText.apply(c, [e.weapon.name, x, y]);
@@ -536,13 +536,13 @@ function cripple_window(_window) {
         /***********************************************************************************************************/
         /* Below are some misc features which I wouldn't consider bannable                                         */
         // all weapons trails on
-        // script = script.replace(/\w+\['weapon'\]&&\w+\['weapon'\]\['trail'\]/g, "true")
+         script = script.replace(/\w+\['weapon'\]&&\w+\['weapon'\]\['trail'\]/g, "true")
 
         // color blind mode
         // script = script.replace(/#9eeb56/g, '#00FFFF');
 
         // no zoom
-        // script = script.replace(/,'zoom':.+?(?=,)/g, ",'zoom':1");
+         script = script.replace(/,'zoom':.+?(?=,)/g, ",'zoom':1");
         /***********************************************************************************************************/
         return script;
     }
