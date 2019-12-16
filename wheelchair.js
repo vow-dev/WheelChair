@@ -323,7 +323,7 @@ function cripple_window(_window) {
                         original_save.apply(c, []);
 
                         // perfect box esp
-                        c.lineWidth = 3;
+                        c.lineWidth = 0;
                         c.strokeStyle = 'rgba(255,50,50,1)';
 
                         let distanceScale = Math.max(.3, 1 - getD3D(worldPosition.x, worldPosition.y, worldPosition.z, e.x, e.y, e.z) / 600);
@@ -351,8 +351,8 @@ function cripple_window(_window) {
                         original_fillRect.apply(c, [xmin - 7, ymin, -10, barMaxHeight * (e.health / e.maxHealth)]);
 
                         // info
-                        c.font = "60px Consolas";
-                        c.fillStyle = "white";
+                        c.font = "45px Consolas";
+                        c.fillStyle = "green";
                         c.strokeStyle='black';
                         c.lineWidth = 1;
                         let x = xmax + 7;
@@ -381,7 +381,7 @@ function cripple_window(_window) {
                             material.depthTest = false;
                             material.fog = false;
                             material.emissive.g = 1;
-                            material.wireframe = true;
+                            material.wireframe = false;
                         }
                     }
                 };
